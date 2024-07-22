@@ -29,7 +29,7 @@ VANETs/IoVs have specific needs:
     *q* and *p*.
 
 -   Compute the public key *h* as
-    *h* = *p* ⋅ (*g* \* *f*<sup>−1</sup> mod  *q*
+    *h* = *p* ⋅ (*g* \* *f*<sup>−1</sup> mod  *q*)
 
 ### Signature Generation
 
@@ -37,17 +37,14 @@ VANETs/IoVs have specific needs:
     ℤ\[*x*\]/(*x*<sup>*N*</sup> − 1).
 
 -   Compute the signature *s* as:
-    *s* = (*f* ⋅ *μ* + *r*) mod  *q*
-    where *r* is a random polynomial with small coefficients.
+    *s* = (*f* ⋅ *μ* + *r*) mod  *q*  where *r* is a random polynomial with small coefficients.
 
 ### Signature Verification
 
 -   Verify the signature *σ* by computing:
     *μ*′ = (*h* ⋅ *s* mod  *q*) mod  *p*
 
--   Check if
-    *μ*′ = *H**a**s**h*(*m*)
-    thus (Check if *μ*′ matches the hash of the original message (*m*).
+-   Check if  *μ*′ = *Hash*(*m*), thusly (Check if *μ*′ matches the hash of the original message (*m*)).
     
 ## 5. Security Considerations
 * Ensure the choice of ℕ, *p*, and *q* and provide a sufficient security level against known attacks.
