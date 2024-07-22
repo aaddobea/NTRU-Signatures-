@@ -1,0 +1,59 @@
+# Introduction to NTRU
+
+NTRU is a lattice-based cryptosystem known for its efficiency and
+resistance to quantum attacks. It involves operations over polynomial
+rings and is used for both encryption and digital signatures.
+
+# Requirements for VANETs/IoVs
+
+VANETs/IoVs have specific needs:
+
+-   **High-speed communication:** Fast signature generation and
+    verification.
+
+-   **Security:** Resistance to common attacks, including quantum
+    attacks.
+
+-   **Scalability:** Ability to handle a large number of vehicles.
+
+-   **Low overhead:** Minimal impact on bandwidth and computational
+    resources.
+
+# NTRU Signature Scheme Components
+
+-   <span class="smallcaps">Key Generation</span>
+
+-   <span class="smallcaps">Signature Generation</span>
+
+-   <span class="smallcaps">Signature Verification</span>
+
+# Key Generation
+
+-   Select parameters ℕ as a prime number, *p*, and *q* such that *p*
+    and *q* are relatively prime and *q* is significantly larger than
+    *p* thus, (*q* \> *p*).
+
+-   Generate private keys *f* and *g* from a polynomial ring
+    ℤ\[*x*\]/(*x*<sup>*N*</sup> − 1) s.t *f* is an invertible modulo of
+    *q* and *p*.
+
+-   Compute the public key *h* as
+    *h* = *p* ⋅ (*g* \* *f*<sup>−1</sup> mod  *q*
+
+# Signature Generation
+
+-   To sign a message *m*, hash the message to a polynomial *μ* in
+    ℤ\[*x*\]/(*x*<sup>*N*</sup> − 1).
+
+-   Compute the signature *s* as:
+    *s* = (*f* ⋅ *μ* + *r*) mod  *q*
+    where *r* is a random polynomial with small coefficients.
+
+# Signature Verification
+
+-   Verify the signature *σ* by computing:
+    *μ*′ = (*h* ⋅ *s* mod  *q*) mod  *p*
+
+-   Check if
+    *μ*′ = *H**a**s**h*(*m*)
+    thus (Check if *μ*′ matches the hash of the original message (*m*).
