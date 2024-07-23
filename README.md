@@ -61,6 +61,6 @@ This example provides a starting point for constructing an NTRU-based signature 
 
 Source Code for my blog post: NTRU signature scheme for Internet of Vehicle and VANETS
 
-#Visit my Blog: [http://adilmoujahid.com](https://medium.com/@abigailaddobea/ntru-signature-scheme-for-internet-of-vehicle-and-vanets-65bcea60bf99)
+#Visit my Blog: [https://medium.com/@abigailaddobea/ntru-signature-scheme-for-internet-of-vehicle-and-vanets-65bcea60bf99]
 
     
