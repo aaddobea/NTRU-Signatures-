@@ -59,4 +59,8 @@ VANETs/IoVs have specific needs:
 ## Conclusion
 This example provides a starting point for constructing an NTRU-based signature algorithm tailored for VANETs/IoVs. For practical deployment, further refinement, testing, and optimization are necessary to ensure security and efficiency in real-world scenarios.
 
+Source Code for my blog post: NTRU signature scheme for Internet of Vehicle and VANETS
+
+#Visit my Blog: [http://adilmoujahid.com](https://medium.com/@abigailaddobea/ntru-signature-scheme-for-internet-of-vehicle-and-vanets-65bcea60bf99)
+
     
